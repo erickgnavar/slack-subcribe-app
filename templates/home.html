@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Python en español</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+</head>
+<body>
+	<div style="text-align: center; margin: 50px auto; width: 400px">
+		<img src="https://www.python.org/static/img/python-logo-large.png" alt="">
+		{% if message %}
+		<div class="alert alert-success" role="alert">{{ message }}</div>
+		{% endif %}
+		<form method="post" action="/request-invitation/">
+			<div class="form-group">
+				<input type="email" name="email" class="form-control" placeholder="Email">
+			</div>
+			<button type="submit" class="btn btn-primary">Solicitar invitación</button>
+		</form>
+	</div>
+</body>
+</html>
